@@ -1,0 +1,15 @@
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/StockManagementSystemApplication.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/config/AppConfig.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/config/GraphQLConfig.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/config/KafkaConfig.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/controller/OrderController.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/controller/StockController.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/dto/OrderRequest.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/dto/OrderResponse.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/entity/Order.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/graphql/OrderResolver.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/repository/OrderRepository.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/service/OrderConsumer.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/service/OrderProducer.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/service/OrderService.java
+/Users/just_chakri/Documents/stock-management-system/src/main/java/com/stockmanagement/service/StockService.java

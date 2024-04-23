@@ -1,0 +1,15 @@
+com/stockmanagement/repository/OrderRepository.class
+com/stockmanagement/service/OrderProducer.class
+com/stockmanagement/dto/OrderRequest.class
+com/stockmanagement/dto/OrderResponse.class
+com/stockmanagement/config/AppConfig.class
+com/stockmanagement/controller/StockController.class
+com/stockmanagement/config/GraphQLConfig.class
+com/stockmanagement/config/KafkaConfig.class
+com/stockmanagement/controller/OrderController.class
+com/stockmanagement/graphql/OrderResolver.class
+com/stockmanagement/service/OrderConsumer.class
+com/stockmanagement/StockManagementSystemApplication.class
+com/stockmanagement/service/StockService.class
+com/stockmanagement/service/OrderService.class
+com/stockmanagement/entity/Order.class

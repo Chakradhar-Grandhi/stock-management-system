@@ -1,0 +1,754 @@
+2024-08-09 23:41:04 INFO  Starting StockManagementSystemApplication using Java 22.0.2 with PID 57648 (/Users/just_chakri/Documents/stock-management-system/target/classes started by just_chakri in /Users/just_chakri/Documents/stock-management-system)
+2024-08-09 23:41:04 INFO  No active profile set, falling back to 1 default profile: "default"
+2024-08-09 23:41:04 INFO  Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-08-09 23:41:04 INFO  For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-08-09 23:41:04 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-09 23:41:04 INFO  Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interface.
+2024-08-09 23:41:05 INFO  Tomcat initialized with port 8080 (http)
+2024-08-09 23:41:05 INFO  Initializing ProtocolHandler ["http-nio-8080"]
+2024-08-09 23:41:05 INFO  Starting service [Tomcat]
+2024-08-09 23:41:05 INFO  Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-09 23:41:05 INFO  Initializing Spring embedded WebApplicationContext
+2024-08-09 23:41:05 INFO  Root WebApplicationContext: initialization completed in 637 ms
+2024-08-09 23:41:05 INFO  HikariPool-1 - Starting...
+2024-08-09 23:41:05 INFO  HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-08-09 23:41:05 INFO  HikariPool-1 - Start completed.
+2024-08-09 23:41:05 INFO  H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2024-08-09 23:41:05 INFO  HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-09 23:41:05 INFO  HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-09 23:41:05 INFO  HHH000026: Second-level cache disabled
+2024-08-09 23:41:05 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-09 23:41:05 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-09 23:41:05 INFO  Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-09 23:41:06 WARN  spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-09 23:41:06 INFO  LiveReload server is running on port 35729
+2024-08-09 23:41:06 INFO  Starting ProtocolHandler ["http-nio-8080"]
+2024-08-09 23:41:06 INFO  Tomcat started on port 8080 (http) with context path '/'
+2024-08-09 23:41:06 INFO  ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-order-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = order-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2024-08-09 23:41:06 INFO  initializing Kafka metrics collector
+2024-08-09 23:41:06 INFO  Kafka version: 3.7.1
+2024-08-09 23:41:06 INFO  Kafka commitId: e2494e6ffb89f828
+2024-08-09 23:41:06 INFO  Kafka startTimeMs: 1723261266494
+2024-08-09 23:41:06 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Subscribed to topic(s): orders
+2024-08-09 23:41:06 INFO  Started StockManagementSystemApplication in 2.135 seconds (process running for 2.394)
+2024-08-09 23:41:06 WARN  [Consumer clientId=consumer-order-group-1, groupId=order-group] Error while fetching metadata with correlation id 2 : {orders=LEADER_NOT_AVAILABLE}
+2024-08-09 23:41:06 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Cluster ID: GUJ57GqmTF2kVIzcXi-SLQ
+2024-08-09 23:41:08 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-09 23:41:08 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] (Re-)joining group
+2024-08-09 23:41:08 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Request joining group due to: need to re-join with the given member-id: consumer-order-group-1-a01ad4ab-09b5-40bf-8cb2-5e17dfd7cd29
+2024-08-09 23:41:08 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] (Re-)joining group
+2024-08-09 23:41:08 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-order-group-1-a01ad4ab-09b5-40bf-8cb2-5e17dfd7cd29', protocol='range'}
+2024-08-09 23:41:08 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Finished assignment for group at generation 1: {consumer-order-group-1-a01ad4ab-09b5-40bf-8cb2-5e17dfd7cd29=Assignment(partitions=[orders-0])}
+2024-08-09 23:41:08 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-order-group-1-a01ad4ab-09b5-40bf-8cb2-5e17dfd7cd29', protocol='range'}
+2024-08-09 23:41:08 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Notifying assignor about the new Assignment(partitions=[orders-0])
+2024-08-09 23:41:08 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Adding newly assigned partitions: orders-0
+2024-08-09 23:41:08 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Found no committed offset for partition orders-0
+2024-08-09 23:41:08 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Resetting offset for partition orders-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 0 rack: null)], epoch=0}}.
+2024-08-09 23:41:08 INFO  order-group: partitions assigned: [orders-0]
+2024-08-09 23:44:48 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-09 23:44:48 INFO  Initializing Servlet 'dispatcherServlet'
+2024-08-09 23:44:48 INFO  Completed initialization in 2 ms
+2024-08-09 23:49:55 INFO  ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = stock-management-system-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2024-08-09 23:49:55 INFO  initializing Kafka metrics collector
+2024-08-09 23:49:55 INFO  [Producer clientId=stock-management-system-producer-1] Instantiated an idempotent producer.
+2024-08-09 23:49:55 INFO  Kafka version: 3.7.1
+2024-08-09 23:49:55 INFO  Kafka commitId: e2494e6ffb89f828
+2024-08-09 23:49:55 INFO  Kafka startTimeMs: 1723261795581
+2024-08-09 23:49:55 INFO  [Producer clientId=stock-management-system-producer-1] Cluster ID: GUJ57GqmTF2kVIzcXi-SLQ
+2024-08-09 23:49:55 INFO  [Producer clientId=stock-management-system-producer-1] ProducerId set to 0 with epoch 0
+2024-08-09 23:49:55 ERROR Backoff FixedBackOff{interval=0, currentAttempts=1, maxAttempts=0} exhausted for orders-0@0
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
+Endpoint handler details:
+Method [public void com.stockmanagement.service.OrderConsumer.consumeOrder(com.stockmanagement.entity.Order)]
+Bean [com.stockmanagement.service.OrderConsumer@9fd29a5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2869)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2814)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2778)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$53(KafkaMessageListenerContainer.java:2701)
+	at io.micrometer.observation.Observation.observe(Observation.java:565)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2699)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2541)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2430)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2085)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1461)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1426)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1296)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.checkAckArg(MessagingMessageListenerAdapter.java:446)
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:424)
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:384)
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:85)
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:50)
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2800)
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot handle message
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:424)
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invoke(MessagingMessageListenerAdapter.java:384)
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:85)
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:50)
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2800)
+	... 12 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [java.lang.String] to [com.stockmanagement.entity.Order] for GenericMessage [payload={"id":1,"symbol":"AAPL","type":"BUY","quantity":10,"price":216.305,"status":"PENDING"}, headers={kafka_offset=0, kafka_consumer=org.springframework.kafka.core.DefaultKafkaConsumerFactory$ExtendedKafkaConsumer@65715437, kafka_timestampType=CREATE_TIME, kafka_receivedPartitionId=0, kafka_receivedTopic=orders, kafka_receivedTimestamp=1723261795593, __TypeId__=[B@485c9527, kafka_groupId=order-group}]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+	at org.springframework.kafka.listener.adapter.KafkaNullAwarePayloadArgumentResolver.resolveArgument(KafkaNullAwarePayloadArgumentResolver.java:48)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:70)
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:420)
+	... 16 common frames omitted
+2024-08-09 23:50:06 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Node -1 disconnected.
+2024-08-09 23:58:55 INFO  [Producer clientId=stock-management-system-producer-1] Node -1 disconnected.
+2024-08-10 00:00:06 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Node -1 disconnected.
+2024-08-10 00:08:55 INFO  [Producer clientId=stock-management-system-producer-1] Node -1 disconnected.
+2024-08-10 00:17:31 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 00:17:32 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:17:32 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 00:17:32 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:17:32 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 00:17:32 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:17:32 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:18:38 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 00:18:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:18:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 00:18:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:18:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 00:18:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:18:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:18:44 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m39s227ms).
+2024-08-10 00:20:59 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 00:20:59 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:20:59 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 00:20:59 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:20:59 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 00:20:59 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:20:59 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:21:46 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m1s915ms).
+2024-08-10 00:37:00 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Disconnecting from node 0 due to request timeout.
+2024-08-10 00:37:00 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Cancelled in-flight FETCH request with correlation id 5045 due to node 0 being disconnected (elapsed time since creation: 908375ms, elapsed time since send: 908375ms, request timeout: 30000ms)
+2024-08-10 00:37:00 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 00:37:00 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Error sending fetch request (sessionId=29808256, epoch=4276) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2024-08-10 00:37:00 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:37:00 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 00:37:00 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:52:06 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 00:52:06 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:52:06 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 00:52:06 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:52:06 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 00:52:06 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:52:06 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 00:52:25 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m38s361ms).
+2024-08-10 01:07:31 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 01:07:31 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:07:31 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 01:07:31 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:07:31 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 01:07:31 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:07:32 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:07:55 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m29s888ms).
+2024-08-10 01:23:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 01:23:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:23:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 01:23:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:23:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 01:23:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:23:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:41:34 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 01:41:34 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:41:34 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 01:41:34 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:41:34 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 01:41:34 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:41:34 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:56:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 01:56:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:56:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 01:56:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:56:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 01:56:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:56:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 01:56:56 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49m1s737ms).
+2024-08-10 02:12:16 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 02:12:16 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:12:16 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 02:12:16 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:12:16 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 02:12:16 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:12:16 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:14:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 02:14:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:14:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 02:14:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:14:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 02:14:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:14:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:15:28 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Disconnecting from node 0 due to request timeout.
+2024-08-10 02:15:28 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Cancelled in-flight FETCH request with correlation id 5327 due to node 0 being disconnected (elapsed time since creation: 66442ms, elapsed time since send: 66442ms, request timeout: 30000ms)
+2024-08-10 02:15:28 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Error sending fetch request (sessionId=473268954, epoch=205) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2024-08-10 02:15:28 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 02:15:28 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:15:28 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 02:15:28 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:15:28 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 02:15:28 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:15:28 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:15:35 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m38s795ms).
+2024-08-10 02:30:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 02:30:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:30:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 02:30:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:30:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 02:30:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:30:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:46:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 02:46:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:46:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 02:46:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:46:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 02:46:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 02:46:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:03:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 03:03:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:03:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 03:03:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:03:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 03:03:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:03:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:19:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 03:19:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:19:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 03:19:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:36:27 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 03:36:27 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:36:27 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 03:36:27 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:36:27 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 03:36:27 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:36:27 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:36:32 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h20m56s686ms).
+2024-08-10 03:53:09 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 03:53:09 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:53:09 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 03:53:09 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:53:09 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 03:53:09 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 03:53:09 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:10:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 04:10:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:10:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 04:10:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:10:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 04:10:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:10:13 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:26:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 04:26:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:26:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 04:26:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:26:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 04:26:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:26:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:42:15 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 04:42:15 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:42:15 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 04:42:15 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:42:15 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 04:42:15 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:42:15 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:57:20 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 04:57:20 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:57:20 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 04:57:20 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:57:20 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 04:57:20 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:57:21 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 04:57:28 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h20m56s171ms).
+2024-08-10 05:15:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 05:15:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:15:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 05:15:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:15:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 05:15:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:15:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:32:52 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 05:32:52 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:32:52 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 05:32:52 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:32:52 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 05:32:52 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:32:52 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:47:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 05:47:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:47:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 05:47:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:47:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 05:47:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:47:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 05:48:14 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m46s274ms).
+2024-08-10 06:05:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 06:05:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:05:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 06:05:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:05:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 06:05:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:05:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:21:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 06:21:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:21:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 06:21:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:21:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 06:21:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:21:30 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:38:02 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Disconnecting from node 0 due to request timeout.
+2024-08-10 06:38:02 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Cancelled in-flight FETCH request with correlation id 5682 due to node 0 being disconnected (elapsed time since creation: 987203ms, elapsed time since send: 987203ms, request timeout: 30000ms)
+2024-08-10 06:38:02 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Error sending fetch request (sessionId=633380021, epoch=230) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2024-08-10 06:38:02 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 06:38:02 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:38:02 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 06:38:02 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:38:07 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49m52s863ms).
+2024-08-10 06:53:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 06:53:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:53:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 06:53:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:53:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 06:53:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 06:53:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 07:08:22 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 07:08:22 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 07:08:22 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 07:08:22 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 07:24:05 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 07:24:05 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 07:24:05 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 07:24:05 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 07:40:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 07:40:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 07:40:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 07:40:18 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 07:58:01 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 07:58:01 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 07:58:01 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 07:58:01 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 07:58:01 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 07:58:01 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 07:58:01 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:06:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 08:06:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:06:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 08:06:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:06:27 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h28m19s765ms).
+2024-08-10 08:13:00 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 08:13:00 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:13:00 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 08:13:00 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:13:21 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m53s812ms).
+2024-08-10 08:29:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 08:29:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:29:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 08:29:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:29:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 08:29:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:29:49 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:44:55 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 08:44:55 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:44:55 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 08:44:55 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:44:55 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 08:44:55 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:44:55 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:45:21 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m516ms).
+2024-08-10 08:46:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 08:46:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:46:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 08:46:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:46:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 08:46:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 08:46:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:01:53 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 09:01:53 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:01:53 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 09:01:53 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:01:53 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 09:01:53 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:01:53 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:07:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 09:07:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:07:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 09:07:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:07:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 09:07:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:07:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:07:26 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m5s12ms).
+2024-08-10 09:13:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 09:13:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:13:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 09:13:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:13:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 09:13:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:13:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:28:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 09:28:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:28:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 09:28:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:28:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 09:28:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:28:39 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:44:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 09:44:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:44:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 09:44:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:44:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 09:44:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 09:44:58 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:00:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:00:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:00:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 10:00:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:00:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:00:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:00:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:00:05 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52m39s132ms).
+2024-08-10 10:08:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:08:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:08:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 10:08:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:08:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:08:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:08:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:08:31 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m25s246ms).
+2024-08-10 10:25:14 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Disconnecting from node 0 due to request timeout.
+2024-08-10 10:25:14 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Cancelled in-flight FETCH request with correlation id 6195 due to node 0 being disconnected (elapsed time since creation: 1000410ms, elapsed time since send: 1000410ms, request timeout: 30000ms)
+2024-08-10 10:25:14 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:25:14 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Error sending fetch request (sessionId=866061660, epoch=361) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2024-08-10 10:25:14 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:25:14 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 10:25:14 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:26:53 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Disconnecting from node 0 due to request timeout.
+2024-08-10 10:26:53 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Cancelled in-flight FETCH request with correlation id 6221 due to node 0 being disconnected (elapsed time since creation: 90409ms, elapsed time since send: 90409ms, request timeout: 30000ms)
+2024-08-10 10:26:54 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Error sending fetch request (sessionId=1288841159, epoch=17) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2024-08-10 10:26:54 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:26:54 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:26:54 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 10:26:54 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:26:54 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:26:54 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:26:54 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:28:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Disconnecting from node 0 due to request timeout.
+2024-08-10 10:28:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Cancelled in-flight FETCH request with correlation id 6254 due to node 0 being disconnected (elapsed time since creation: 79709ms, elapsed time since send: 79709ms, request timeout: 30000ms)
+2024-08-10 10:28:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Error sending fetch request (sessionId=1405240142, epoch=23) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2024-08-10 10:28:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:28:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:28:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 10:28:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:28:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:28:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:28:25 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:28:30 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m58s976ms).
+2024-08-10 10:29:22 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s244ms).
+2024-08-10 10:30:36 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:30:36 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:30:36 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 10:30:36 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:31:34 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m12s493ms).
+2024-08-10 10:47:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Disconnecting from node 0 due to request timeout.
+2024-08-10 10:47:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Cancelled in-flight FETCH request with correlation id 6480 due to node 0 being disconnected (elapsed time since creation: 900464ms, elapsed time since send: 900464ms, request timeout: 30000ms)
+2024-08-10 10:47:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Error sending fetch request (sessionId=1708008570, epoch=183) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2024-08-10 10:47:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:47:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:47:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 10:47:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:47:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:47:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:47:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:47:04 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m29s870ms).
+2024-08-10 10:58:41 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:58:41 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:58:41 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 10:58:41 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:58:41 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 10:58:41 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:58:42 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 10:58:47 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m42s703ms).
+2024-08-10 11:02:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 11:02:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:02:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 11:02:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:02:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 11:02:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:02:40 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:05:03 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 11:05:03 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:05:03 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 11:05:03 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:05:03 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 11:05:03 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:05:03 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:05:10 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m22s710ms).
+2024-08-10 11:18:03 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 11:18:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:18:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 11:18:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:18:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 11:18:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:18:04 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:18:32 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m52s686ms).
+2024-08-10 11:42:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 11:42:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:42:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 11:42:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:42:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 11:42:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:42:51 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 11:43:17 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m14s321ms).
+2024-08-10 12:30:42 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 12:30:42 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:30:42 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 12:30:42 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:30:42 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 12:30:42 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:30:42 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:34:56 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 12:34:56 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:34:56 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 12:34:56 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:34:56 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 12:34:56 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:34:56 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:35:02 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m44s539ms).
+2024-08-10 12:35:44 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Disconnecting from node 0 due to request timeout.
+2024-08-10 12:35:44 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Cancelled in-flight FETCH request with correlation id 15112 due to node 0 being disconnected (elapsed time since creation: 32889ms, elapsed time since send: 32889ms, request timeout: 30000ms)
+2024-08-10 12:35:44 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Error sending fetch request (sessionId=2023592679, epoch=7337) to node 0:
+org.apache.kafka.common.errors.DisconnectException: null
+2024-08-10 12:36:37 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s897ms).
+2024-08-10 12:38:22 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m45s193ms).
+2024-08-10 12:39:27 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m5s156ms).
+2024-08-10 12:40:30 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m3s152ms).
+2024-08-10 12:44:10 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 12:44:10 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:44:10 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Client requested disconnect from node 2147483647
+2024-08-10 12:44:10 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:44:10 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Group coordinator localhost:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2024-08-10 12:44:10 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:44:10 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Discovered group coordinator localhost:9092 (id: 2147483647 rack: null)
+2024-08-10 12:44:40 WARN  HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m9s498ms).
+2024-08-10 12:45:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Revoke previously assigned partitions orders-0
+2024-08-10 12:45:07 INFO  order-group: partitions revoked: [orders-0]
+2024-08-10 12:45:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Member consumer-order-group-1-a01ad4ab-09b5-40bf-8cb2-5e17dfd7cd29 sending LeaveGroup request to coordinator localhost:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2024-08-10 12:45:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-08-10 12:45:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Request joining group due to: consumer pro-actively leaving the group
+2024-08-10 12:45:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Unsubscribed all topics or patterns and assigned partitions
+2024-08-10 12:45:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Resetting generation and member id due to: consumer pro-actively leaving the group
+2024-08-10 12:45:07 INFO  [Consumer clientId=consumer-order-group-1, groupId=order-group] Request joining group due to: consumer pro-actively leaving the group
+2024-08-10 12:45:07 INFO  Metrics scheduler closed
+2024-08-10 12:45:07 INFO  Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-10 12:45:07 INFO  Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-08-10 12:45:07 INFO  Metrics reporters closed
+2024-08-10 12:45:07 INFO  App info kafka.consumer for consumer-order-group-1 unregistered
+2024-08-10 12:45:07 INFO  order-group: Consumer stopped
+2024-08-10 12:45:07 INFO  [Producer clientId=stock-management-system-producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2024-08-10 12:45:07 INFO  Metrics scheduler closed
+2024-08-10 12:45:07 INFO  Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-08-10 12:45:07 INFO  Closing reporter org.apache.kafka.common.telemetry.internals.ClientTelemetryReporter
+2024-08-10 12:45:07 INFO  Metrics reporters closed
+2024-08-10 12:45:07 INFO  App info kafka.producer for stock-management-system-producer-1 unregistered
+2024-08-10 12:45:07 INFO  Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-10 12:45:07 WARN  Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-224]
+2024-08-10 12:45:07 INFO  HikariPool-1 - Shutdown initiated...
+2024-08-10 12:45:07 INFO  HikariPool-1 - Shutdown completed.

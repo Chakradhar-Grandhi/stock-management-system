@@ -1,0 +1,17 @@
+type Query {
+    getOrderById(id: ID!): Order
+    getAllOrders: [Order]
+}
+
+type Mutation {
+    placeOrder(symbol: String!, quantity: Int!, type: String!): Order
+}
+
+type Order {
+    id: ID!
+    symbol: String!
+    quantity: Int!
+    type: String!
+    status: String!
+    price: Float!
+}
