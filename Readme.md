@@ -38,8 +38,8 @@ The **Stock Management System** is a Spring Boot application designed to manage 
 
 ### Prerequisites
 
-- **Java 8+** installed on your machine.
-- **Maven** installed for building the project.
+- **Java 8+** 
+- **Maven** 
 - **Docker** installed if you want to run the project in a containerized environment.
 
 ### Installation
